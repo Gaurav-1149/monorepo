@@ -10,7 +10,7 @@ jobs:
         steps:
             - run: |
                 echo "${{ secrets.AWS_TEST_SECRET }}" &> ~/ssh_key
-                ssh -i ~/ssh_key ubuntu@65.0.27.85
+                ssh -o StrictHostKeyChecking=no -i ~/ssh_key ubuntu@65.0.27.85
                 cd monorepo/ && git pull
                 pnpm install
                 pnpm run build
