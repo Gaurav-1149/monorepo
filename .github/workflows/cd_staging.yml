@@ -8,5 +8,4 @@ jobs:
         runs-on: ubuntu-latest
         name: Deploying everything to the staging cluster
         steps:
-            - name: SSH into server
             - run: echo "hi"
