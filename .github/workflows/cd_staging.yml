@@ -11,7 +11,7 @@ jobs:
             - name: SSH into server
             - run: |
                 echo ${{ secret.AWS_TEST_SECRET }} &> ~/ssh_key
-                ssh -i ~/ssh_key ubuntu@3.110.189.133
+                ssh -i ~/ssh_key ubuntu@65.0.27.85
                 cd monorepo/ && git pull
                 pnpm install
                 pnpm run build
