@@ -9,7 +9,7 @@ jobs:
         name: Deploying everything to the staging cluster
         steps:
             - run: |
-                echo ${{ secret.AWS_TEST_SECRET }} &> ~/ssh_key
+                echo ${{ secrets.AWS_TEST_SECRET }} &> ~/ssh_key
                 ssh -i ~/ssh_key ubuntu@65.0.27.85
                 cd monorepo/ && git pull
                 pnpm install
