@@ -6,7 +6,7 @@ on:
 
 jobs:
     redeploy_everything:
-        - name: Deploying everything to the staging cluster
-        - steps:
+        name: Deploying everything to the staging cluster
+        steps:
             - name: SSH into server
             - run: echo "hi"
